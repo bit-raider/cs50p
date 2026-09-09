@@ -32,4 +32,4 @@ main()
 
 # and lastly no punctuation and special characters, shouldn't be that bad
 
-
+#did some shit and there's a million errors, 08/09/2026, cya later
