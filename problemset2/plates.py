@@ -1,6 +1,6 @@
 def main():
     plate = input("Plate: ").upper()
-    s = str
+    s = plate
     if is_valid(s):
         print("Valid")
     else:
@@ -8,20 +8,21 @@ def main():
 
 
 def is_valid(s):
-    if char.isdigit() or char.isalpha():
-        if len(s) < 2 or len(s) > 6 :
-            return False
-        elif not s[0, 1].isalpha():
-            return False
-        number_started = False
-        for char in s:
-            if char.isdigit():
-                number_started = True
-            elif number_started and char.isalpha():
-                return False
-    else:
+    if len(s) < 2 or len(s) > 6 :
         return False
-    
+    elif not s[0:2].isalpha():
+        return False
+    number_started = False
+    for char in s:
+        if char.isdigit():
+            if not number_started and char == "0":
+                return False
+            number_started = True
+        elif number_started and char.isalpha():
+            return False
+        elif not char.isalnum():
+            return False
+    return True
         
 main()
 
