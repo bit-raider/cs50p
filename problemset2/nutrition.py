@@ -21,9 +21,8 @@ fruit = [
     {"name": "watermelon", "calories": 80 }
     ]
 
-x = input("Item: ").lower().strip()
+x = str(input("Item: ")).lower()
 
 for i in fruit:
     if x == i["name"]:
-        print("Calories:", i["calories"])
-        break
+        print(f"Calories: {i["calories"]}")
