@@ -13,7 +13,7 @@ while a > 0:
 
 print(f"Amount due: {a}")
 
- 
+
 
 
 
