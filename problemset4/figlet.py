@@ -8,5 +8,6 @@ try:
     else:
         sys.exit("Invalid arguments")
     print("Output: ", f)
-    
+except :
+    print("Invalid use")
             
