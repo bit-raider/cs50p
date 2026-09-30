@@ -13,19 +13,19 @@ while True:
 num = random.randint(1,level)
 
 while True:
-    g = int(input("Guess: "))
-    if g > num:
-        print("Too large!")
-    elif g < num:
-        print("Too small!")
-    elif g == num:
-        print("Just right!")
-        break
+    try:
+        g = int(input("Guess: "))
+        if g > num:
+            print("Too large!")
+        elif g < num:
+            print("Too small!")
+        elif g == num:
+            print("Just right!")
+            break
+    except ValueError:
+        continue
 
-
-
-
-
+# tried but didn't work I think:
 
 # while True:
 #     try:
